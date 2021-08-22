@@ -19,6 +19,7 @@ export default function Read() {
                     <Table.Row>
                         <Table.HeaderCell>First Name</Table.HeaderCell>
                         <Table.HeaderCell>Last Name</Table.HeaderCell>
+                        <Table.HeaderCell>Email</Table.HeaderCell>
                         <Table.HeaderCell>Checked</Table.HeaderCell>
                     </Table.Row>
                 </Table.Header>
@@ -29,6 +30,7 @@ export default function Read() {
                             <Table.Row>
                                 <Table.Cell>{data.firstName}</Table.Cell>
                                 <Table.Cell>{data.lastName}</Table.Cell>
+                                <Table.Cell>{data.emailAddress}</Table.Cell>
                                 <Table.Cell>{data.checkbox ? 'checked' : 'unchecked'}</Table.Cell>
                             </Table.Row>
                         )
