@@ -1,6 +1,7 @@
 import React, {useEffect, useState} from "react";
-import {Table} from 'semantic-ui-react';
+import {Table, Button} from 'semantic-ui-react';
 import axios from "axios";
+import { Link } from 'react-router-dom';
 
 export default function Read() {
 
@@ -14,6 +15,7 @@ export default function Read() {
     }, [])
     return (
         <div>
+
             <Table singleLine>
                 <Table.Header>
                     <Table.Row>
@@ -21,6 +23,8 @@ export default function Read() {
                         <Table.HeaderCell>Last Name</Table.HeaderCell>
                         <Table.HeaderCell>Email</Table.HeaderCell>
                         <Table.HeaderCell>Checked</Table.HeaderCell>
+                        <Table.HeaderCell>Update</Table.HeaderCell>
+                        <Table.HeaderCell>Delete</Table.HeaderCell>
                     </Table.Row>
                 </Table.Header>
 
@@ -32,6 +36,15 @@ export default function Read() {
                                 <Table.Cell>{data.lastName}</Table.Cell>
                                 <Table.Cell>{data.emailAddress}</Table.Cell>
                                 <Table.Cell>{data.checkbox ? 'checked' : 'unchecked'}</Table.Cell>
+                                <Link to='/update'>
+                                    <Table.Cell>
+                                        <Button>Update</Button>
+                                    </Table.Cell>
+                                </Link>
+                                    <Table.Cell>
+                                        <Button>Delete</Button>
+                                    </Table.Cell>
+
                             </Table.Row>
                         )
                     })}
