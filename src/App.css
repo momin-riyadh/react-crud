@@ -11,3 +11,9 @@
 .main-header{
   font-family: 'Montserrat', sans-serif;
 }
+
+.create-form label{
+  color: #454545 !important;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 12px !important;
+}
