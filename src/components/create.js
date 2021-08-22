@@ -6,6 +6,13 @@ function Create() {
     const [lastName, setLastName] = useState('');
     const [checkbox, setCheckbox] = useState(false)
 
+
+    const postData = () => {
+        console.log(firstName);
+        console.log(lastName);
+        console.log(checkbox);
+    }
+
     return <Form className="create-form">
         <Form.Field>
             <label>First Name</label>
@@ -18,7 +25,7 @@ function Create() {
         <Form.Field>
             <Checkbox label='I agree to the Terms and Conditions' onChange={(e) => setCheckbox(!checkbox)}/>
         </Form.Field>
-        <Button type='submit'>Submit</Button>
+        <Button onClick={postData} type='submit'>Submit</Button>
     </Form>;
 }
 
