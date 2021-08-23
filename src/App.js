@@ -12,7 +12,7 @@ function App() {
 
                     <h2 className="main-header">
                         React Crud Operations
-                        <Link to="/create" style={{marginLeft: "30px"}}>
+                        <Link to="/create" style={{marginLeft: "30px", color:"#e32636"}}>
                             <i className="plus icon"/>
                         </Link>
 

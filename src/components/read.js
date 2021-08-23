@@ -67,7 +67,7 @@ export default function Read() {
                                     </Link>
                                 </Table.Cell>
                                 <Table.Cell>
-                                    <Button onClick={() => onDelete(data.id)}>Delete</Button>
+                                    <Button className="ui red button" onClick={() => onDelete(data.id)}>Delete</Button>
                                 </Table.Cell>
 
                             </Table.Row>
