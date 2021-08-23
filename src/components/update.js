@@ -17,7 +17,8 @@ function Update() {
         setLastName(localStorage.getItem('Last Name'));
         setEmailAddress(localStorage.getItem('Email Address'));
         setCheckbox(localStorage.getItem('Checkbox Value'));
-    })
+
+    }, [])
 
     const updateAPIData = () => {
         axios.put(`https://6121f7ecf5849d0017fb4334.mockapi.io/fakedata/${id}`,{
@@ -44,7 +45,7 @@ function Update() {
                     </Form.Field>
                     <Form.Field>
                         <label>Email</label>
-                        <input placeholder='Your Email' value={emailAddress ?? "noemail@found.com"}
+                        <input placeholder='Your Email' value={emailAddress}
                                onChange={(e) => setEmailAddress(e.target.value)}/>
                     </Form.Field>
                     <Form.Field>
