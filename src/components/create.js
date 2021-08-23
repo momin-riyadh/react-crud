@@ -35,7 +35,7 @@ function Create() {
             </Form.Field>
             <Form.Field>
                 <label>Email</label>
-                <input placeholder='Your Email' onChange={(e) => setEmailAddress(e.target.value)}/>
+                <input placeholder='Your Email' onChange={(e) => setEmailAddress(e.target.value) ?? "noemail@email.com"}/>
             </Form.Field>
             <Form.Field>
                 <Checkbox label='I agree to the Terms and Conditions' onChange={(e) => setCheckbox(!checkbox)}/>
@@ -44,12 +44,12 @@ function Create() {
 
         </Form>;
 
-    }
-    else {
+    } else {
         return (
             <div id="confirmation">Your form has been submitted</div>
         )
 
     }
 }
+
 export default Create;
