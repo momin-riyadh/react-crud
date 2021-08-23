@@ -1,6 +1,7 @@
-import React, {useEffect, useState} from 'react'
+import React, {useState} from 'react'
 import {Button, Checkbox, Form} from 'semantic-ui-react';
 import axios from "axios";
+import {useHistory} from "react-router-dom";
 
 
 function Create() {
@@ -8,8 +9,8 @@ function Create() {
     const [lastName, setLastName] = useState('');
     const [checkbox, setCheckbox] = useState(false);
     const [emailAddress, setEmailAddress] = useState('');
-    const [isSubmitted, setIsSubmitted] = useState(false)
-
+    const [isSubmitted, setIsSubmitted] = useState(false);
+    let history = useHistory();
 
     const postData = async () => {
 
@@ -18,6 +19,8 @@ function Create() {
             lastName,
             emailAddress,
             checkbox
+        }).then(() => {
+            history.push('/read');
         })
         setIsSubmitted(true);
     }

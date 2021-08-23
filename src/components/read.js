@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from "react";
 import {Table, Button} from 'semantic-ui-react';
 import axios from "axios";
-import {Link} from 'react-router-dom';
+import {Link, useHistory} from 'react-router-dom';
 
 export default function Read() {
 
@@ -61,11 +61,11 @@ export default function Read() {
                                 <Table.Cell>{data.lastName}</Table.Cell>
                                 <Table.Cell>{data.emailAddress}</Table.Cell>
                                 <Table.Cell>{data.checkbox ? 'checked' : 'unchecked'}</Table.Cell>
-                                <Link to='/update'>
-                                    <Table.Cell>
+                                <Table.Cell>
+                                    <Link to='/update'>
                                         <Button onClick={() => updateData(data)}>Update</Button>
-                                    </Table.Cell>
-                                </Link>
+                                    </Link>
+                                </Table.Cell>
                                 <Table.Cell>
                                     <Button onClick={() => onDelete(data.id)}>Delete</Button>
                                 </Table.Cell>
