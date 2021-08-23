@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from "react";
 import {Table, Button} from 'semantic-ui-react';
 import axios from "axios";
-import { Link } from 'react-router-dom';
+import {Link} from 'react-router-dom';
 
 export default function Read() {
 
@@ -41,9 +41,9 @@ export default function Read() {
                                         <Button>Update</Button>
                                     </Table.Cell>
                                 </Link>
-                                    <Table.Cell>
-                                        <Button>Delete</Button>
-                                    </Table.Cell>
+                                <Table.Cell>
+                                    <Button>Delete</Button>
+                                </Table.Cell>
 
                             </Table.Row>
                         )
