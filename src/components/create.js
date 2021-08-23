@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React, {useEffect, useState} from 'react'
 import {Button, Checkbox, Form} from 'semantic-ui-react';
 import axios from "axios";
 
@@ -35,7 +35,7 @@ function Create() {
             </Form.Field>
             <Form.Field>
                 <label>Email</label>
-                <input placeholder='Your Email' onChange={(e) => setEmailAddress(e.target.value) ?? "noemail@email.com"}/>
+                <input placeholder='Your Email' onChange={(e) => setEmailAddress(e.target.value)}/>
             </Form.Field>
             <Form.Field>
                 <Checkbox label='I agree to the Terms and Conditions' onChange={(e) => setCheckbox(!checkbox)}/>
