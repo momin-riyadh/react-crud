@@ -1,6 +1,6 @@
 import './App.css';
-import Create from "./components/create";
 import {BrowserRouter as Router, Route} from 'react-router-dom';
+import Create from "./components/create";
 import Read from "./components/read";
 import Update from "./components/update";
 
