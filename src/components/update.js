@@ -29,7 +29,7 @@ function Update() {
             emailAddress,
             checkbox
         }).then(() => {
-            history.push('/read')
+            history.push('/')
         })
     }
 

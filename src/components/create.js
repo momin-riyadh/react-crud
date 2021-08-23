@@ -20,7 +20,7 @@ function Create() {
             emailAddress,
             checkbox
         }).then(() => {
-            history.push('/read');
+            history.push('/');
         })
         setIsSubmitted(true);
     }
