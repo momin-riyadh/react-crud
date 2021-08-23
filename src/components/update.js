@@ -21,7 +21,7 @@ function Update() {
     }, [])
 
     const updateAPIData = () => {
-        axios.put(`https://6121f7ecf5849d0017fb4334.mockapi.io/fakedata/${id}`,{
+        axios.put(`https://6121f7ecf5849d0017fb4334.mockapi.io/fakedata/${id}`, {
             firstName,
             lastName,
             emailAddress,
