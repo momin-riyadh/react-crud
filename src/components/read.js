@@ -23,7 +23,18 @@ export default function Read() {
     }
 
     const onDelete = (id) => {
-        axios.delete(`https://6121f7ecf5849d0017fb4334.mockapi.io/fakedata/${id}`);
+        axios.delete(`https://6121f7ecf5849d0017fb4334.mockapi.io/fakedata/${id}`)
+            .then(() => {
+                getData();
+            })
+    }
+
+
+    const getData = () => {
+        axios.get(`https://6121f7ecf5849d0017fb4334.mockapi.io/fakedata`)
+            .then((getData) => {
+                setAPIData(getData.data)
+            })
     }
 
 
